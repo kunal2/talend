@@ -1,0 +1,43 @@
+package routines;
+
+import java.math.BigInteger;
+import java.util.Random;
+
+public class RandomBigIntGenerator {
+
+    
+    public static String randomBigIntGenerator(String minimum, String maximum) {
+       
+    	//BigInteger bigInteger = new BigInteger("10000000000000000000000000");// uper limit
+    	BigInteger bigInteger = new BigInteger(maximum);
+		
+        //BigInteger min = new BigInteger("1000000000000000000000000");// lower limit
+    	BigInteger min = new BigInteger(minimum);
+		
+		//Get the difference between the range
+        BigInteger bigInteger1 = bigInteger.subtract(min);
+		
+		//Get the random numbers
+        Random rnd = new Random();
+		
+		//bitLength() function returns the number of bits in the corresponding numbers excluding the bit signed
+		
+        int maxNumBitLength = bigInteger.bitLength();
+        //int maxNumBitLength = limit;
+        BigInteger aRandomBigInt;
+
+        aRandomBigInt = new BigInteger(maxNumBitLength, rnd);
+        if (aRandomBigInt.compareTo(min) < 0)
+          aRandomBigInt = aRandomBigInt.add(min);
+        if (aRandomBigInt.compareTo(bigInteger) >= 0)
+          aRandomBigInt = aRandomBigInt.mod(bigInteger1).add(min);
+    	
+    	String result = aRandomBigInt.toString(); //Converts the bigInteger type into string
+    	
+    	return result;
+    }
+}
+
+
+//how to call the Generator
+//RandomBigIntGenerator.randomBigIntGenerator("1000000000000000000000000", "10000000000000000000000000")  
