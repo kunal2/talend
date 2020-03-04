@@ -1,0 +1,68 @@
+package routines;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+/*
+ * Author: Kunal Toolsy
+ * Date: 04/03/2020
+ * Description: This routine allows us to return an empty string if date(string) is null or empty,
+ * else if it is not empty we shall get a date in string in the desired format.
+ * Benefits of using this routine are:
+ * 1. No need to cater for nulls or empty strings
+ * 2. From any format to any format
+ * 3. Can even grab the year only (returns a string) etc...
+ * 
+ * see below 4 test cases:
+ *1. DateTransform.dateTransform(row1.dateOfBirth,"dd/MM/yyyy","yyyy") // from 23/02/2000 to 2000
+ *2. DateTransform.dateTransform(row1.dateOfBirth,"dd/MM/yyyy","yyyyMMdd")  // from 23/02/2000 to 20000223 
+ *3. DateTransform.dateTransform(row1.dateOfBirth,"dd/MM/yyyy","yyyy-MM-dd")  // from  23/02/2000 to 2000-02-23
+ *4. DateTransform.dateTransform(row1.dateOfBirth,"dd/MM/yyyy HH:mm:ss","yyyy-MM-dd HH:mm:ss") // from 02/02/1999 11:00:12 to 1999-02-02 11:00:12
+ */
+public class DateTransform {
+
+    /**
+     * dateTransform: return a date in string format (datatype)
+     * 
+     * 
+     * {talendTypes} String
+     * 
+     * {Category} User Defined
+     * 
+     * {param} string("23/02/2000","dd/MM/yyyy", "yyyy-MM-dd") input: Date in string input and output date format 
+     * 
+     * {example} dateTransform("23/02/2000","dd/MM/yyyy", "yyyy-MM-dd") # 2000-02-23.
+     * @return 
+     * @throws ParseException 
+     */
+    public static String dateTransform(String inputdate, String OLD_FORMAT, String NEW_FORMAT) throws ParseException {
+    	
+    	String newdate = inputdate.trim();
+    	int length;
+    	length = inputdate.length();
+        if (length == 0)
+        {
+        	newdate = ""; //should return empty string if length of inputdate is 0
+        }
+        else {
+        	//final String OLD_FORMAT = "dd/MM/yyyy";
+        	//final String NEW_FORMAT = "yyyy-MM-dd";
+
+        	// 23/02/2000 ==> (becomes) 2000-02-23  
+        	//Assign the variable oldDateString with the value of inputdate
+        	String oldDateString = inputdate;
+        	//Create new variable to store new date(string)
+        	String newDateString;
+        	
+        	//SimpleDateFormat
+        	SimpleDateFormat sdf = new SimpleDateFormat(OLD_FORMAT);
+        	Date d = sdf.parse(oldDateString);
+        	sdf.applyPattern(NEW_FORMAT);
+        	newDateString = sdf.format(d);
+        	newdate = newDateString;
+        }
+		return newdate;
+        
+    }
+}
