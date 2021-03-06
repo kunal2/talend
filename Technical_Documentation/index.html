@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talend Documentation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="navbar">
+        <header> <h1>Talend Documentation</h1></header>
+        <ul>
+          <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+          <li><a class="nav-link" href="#Talend_Studio">Talend Studio</a></li>
+          <li><a class="nav-link" href="#Projects">Projects</a></li>
+          <li><a class="nav-link" href="#Business_Model">Business Model</a></li>
+          <li><a class="nav-link" href="#Data_Integration">Data Integration</a></li>
+          
+          <li><a class="nav-link" href="#Managing_Metadata">Managing Metadata</a></li>
+          <li><a class="nav-link" href="#transform_data">Transform Data - tmap</a></li>
+          <li><a class="nav-link" href="#Managing_Routines">Managing Routines </a></li>
+          <li><a class="nav-link" href="#load_data">Load Data </a></li>
+          <li><a class="nav-link" href="#run_job">Run Job </a></li>
+          <li><a class="nav-link" href="#error_handling">Error Handling </a></li>
+          
+          
+      </nav>
+      <main id="main-doc">
+        <section class="main-section" id="Introduction">
+          <header> <h1>Introduction</h1></header>
+          <article>
+            <h2>Talend Solutions</h2>
+            <p>There are different type of Talend soultions listed below</p>
+            <ol>
+              <li>Talend Open Studio</li>
+              <li>Talend Data Integration</li>
+              <li>Talend ESB</li>
+              <li>Talend Big Data</li>
+              <li>Talend Fabric</li>
+            </ol>
+           
+          </article>
+        </section>
+        <section class="main-section" id="Talend_Studio">
+          <header> <h1>Talend Studio</h1></header>
+          <h2>Data Integration and Talend</h2>
+          <p>Talend provides you with a range of open source and subscription Studios you can use to create your projects and manage data of any type or volume.</p>
+          <p>Using the graphical User Interface and hundreds of pre-built components and connectors, you can design your Jobs with a drag-and-drop interface and native code generation.</p>
+          <p>The key capabilities of Talend Studio are accessible from different perspectives.</p>
+          <p>The availability of the perspectives depends on your license in the case of a local project, or on the type of your remote project.</p>
+          <h2>Why use Talend ?</h2>
+          <p>Native Code</p>
+          <p>Better Collaboration</p>
+          <p>Faster Designing</p>
+          <p>Early Cleansing</p>
+          <p>Efficient Management</p>
+          <p>Easy Scalability</p>
+          <p>Real Time Statistics</p>
+        </section>
+        <section class="main-section" id="Projects">
+          <header> <h1>Projects</h1></header>
+          <p>A project is the highest physical structure for storing all different types of items. Once you launch your Talend Studio and before you start a Business Model, a data integration Job, a Route, or any other tasks, you need first create or import a project.</p>
+          <h2>Open a working project</h2>
+          <p>If we are opening the existing project in the workspace, we just have to choose the project and then click on finish </p>
+          <img src="img/01_Start/01_Capture_Start.PNG" alt="existing_project">
+          <h2>Creating Projects</h2>
+          <p>To create a new project, choose the option "Create a new project", then give the project a name and finally click on create</p>
+          <img src="img/01_Start/02_Capture_Create.PNG" alt="new_project">
+          <h2>Import an existing project</h2>
+          <p>To import an existing project from another workspace or an exported project, choose option import an existing project, then browse to find the project and then click on import</p>
+          <img src="img/01_Start/02_Capture_Import.PNG" alt="new_project">
+        </section>
+        <section class="main-section" id="Business_Model">
+            <header> <h1>Business Model</h1></header>
+            <h2>Create a business model</h2>
+            <p>Step 1 - Click on create Business Model</p>
+            <img src="img/02_BusinessModel/01_Create_BM.png" alt="new_business_model">
+            <p>Step 2 - Give the business model a name</p>
+            <img src="img/02_BusinessModel/02_Naming_BM.png" alt="business_model_give_name">
+            <p>Step 3 - Drag and drop components from the palette, and then link them together.</p>
+            <img src="img/02_BusinessModel/03_View_BM1.PNG" alt="business_model_add_components">
+        </section>
+        <section class="main-section" id ="Data_Integration">
+          <header> <h1>Data Integration</h1></header>
+          <h2>Create a new job</h2>
+          <p>Step 1 - Click on create new job.</p>
+          <img src="img/03_Design_Jobs/01_Job_Create.png" alt="new_job">
+          <p>Step 2 - Give the job a name and a purpose or description.</p>
+          <img src="img/03_Design_Jobs/02_Job_Create.png" alt="give_jobname">
+          <p>Step 3 - Drag and drop new components from palette and connect them. The image below shows us the input configuration to read a csv file.</p>
+          <img src="img/03_Design_Jobs/03_Read_Data.PNG" alt="job_add_component">
+        </section>
+        <section class="main-section" id="Managing_Metadata">
+          <header><h1>Managing Metadata</h1></header>
+          <h2>Create a metadata from a csv file</h2>
+          <p>Step 1 - Expand the metadata icon from the repository. Click on file delimiter and create file delimeter.</p>
+          <img src="img/04_Meta_Data/01_Create_MetaData.png" alt="new_metadata">
+          <p>Step 2 - Give the file delimiter a name and a purpose or description.</p>
+          <img src="img/04_Meta_Data/02_CreateMD.PNG" alt="give_metadata_name">
+          <p>Step 3 - Browse the delimited file and choose operating system (windows or linux)</p>
+          <img src="img/04_Meta_Data/03_CreateMD.PNG" alt="browse_file1">
+          <p>Step 4 - Check File viwer and see if data is visible.</p>
+          <img src="img/04_Meta_Data/04_CreateMD.PNG" alt="browse_file2">
+          <p>Step 5 - Configure the metadata. Choose the Field and row separator.</p>
+          <img src="img/04_Meta_Data/05_CreateMD.PNG" alt="Configure-metadata">
+          <p>Step 6 - Set all datatypes for every field as string.</p>
+          <img src="img/04_Meta_Data/06_CreateMD.PNG" alt="metadata-datatype">
+          <p>Step 7 - Finally give the metadata a name. Check the result in the screenshot added below:</p>
+          <p>If everything is good then click finish.</p>
+          <img src="img/04_Meta_Data/07_CreateMD.PNG" alt="metadata-datatype">
+        </section>
+        <section class="main-section" id="transform_data">
+            <header><h1>tmap - Transformation</h1></header>
+            <h2>Transformation of data inside the tmap</h2>
+            <p>Step 1 - Check the source of the input. All datatypes are strings</p>
+            <img src="img/05_Transform/01_InputData.PNG" alt="transform_data1">
+            <p>Step 2 - Set output to correct columns name and datatypes.</p>
+            <img src="img/05_Transform/02_OutputData.PNG" alt="transform_data2">
+            <p>Step 3 - Transform data (string to integer)</p>
+            <img src="img/05_Transform/03_Transform.PNG" alt="transform_data3">
+            <p>Step 4 - After Transformation</p>
+            <img src="img/05_Transform/04_AfterTransform.PNG" alt="transform_data4">
+          </section>
+        <section class="main-section" id="Managing_Routines">
+          <header> <h1>Managing Routines</h1></header>
+          <h2>Check if object is null</h2>
+          <code>
+            public static boolean ISNULL(Object variable) {
+                return variable == null;
+            }
+            </code>
+            <h2>Check if object is relational</h2>
+          <code>
+            public static boolean NOT(boolean expression) {
+                return !expression;
+            }
+            </code>
+            <h2>Check is input is null or not</h2>
+          <code>
+            public static int isNull(Object value) {
+                if (value == null) {
+                    return 1;
+                }
+                return 0;
+        
+            }
+            </code>
+            <h2>Transform into lowercase letters</h2>
+            <code>
+                public static String DOWNCASE(String string) {
+                    return string == null ? null : string.toLowerCase();
+                }            
+            </code>
+            <h2>Transform into uppercase letters</h2>
+           <code>
+                public static String UPCASE(String string) {
+                    return string == null ? null : string.toUpperCase();
+                }
+           </code>
+        </section>
+        <section class="main-section" id="load_data">
+            <header><h1>Loading data in databases</h1></header>
+            <h2>Insert data into tables (mysql)</h2>
+            <p>Step 1 - Set configurations for mysql connection</p>
+            <img src="img/06_Load/01_LoadData.PNG" alt="config_mysql1">
+            <p>Step 2 - Choose actions and operation type.</p>
+            <img src="img/06_Load/02_LoadData.PNG" alt="config_mysql2">
+            
+        </section>
+        <section class="main-section" id="run_job">
+            <header><h1>How to run talend jobs</h1></header>
+            <h2>On Development mode - run via studio</h2>
+            <p>Step 1 - Click on the little play button on the basic run tab</p>
+            <img src="img/07_RunJob/01_runjob.PNG" alt="run_job">
+            
+        </section>
+        <section class="main-section" id="error_handling">
+            <header><h1>Error Handling</h1></header>
+            <h2>Fix Errors or Warnings</h2>
+            <p>Step 1 - Errors will appear in red in console.</p>
+            <img src="img/07_RunJob/02_ErrorHandling.PNG" alt="Error_Handling1">
+            <p>Step 2 - Read the error or warning and then find a solution</p>
+            <img src="img/07_RunJob/03_ErrorHandling.PNG" alt="Error_Handling1">
+            <p>Step 3 - Application of solution and run again</p>
+            <img src="img/07_RunJob/04_AfterError.PNG" alt="Error_Handling1">
+            <p>Step 4 - Results</p>
+            <img src="img/07_RunJob/05_Results.PNG" alt="Error_Handling1">
+            
+        </section>
+      </main>
+</body>
+</html>
